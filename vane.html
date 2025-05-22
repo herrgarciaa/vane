@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caja de Sobres para Vanessa</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/561/561127.png" />
+  <style>
+    body {
+      background: #f8f0fc; /* lavanda muy claro */
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #4b2a57; /* morado oscuro para texto */
+    }
+
+    h1 {
+      margin-top: 30px;
+      color: #8a2be2; /* azul violeta */
+      font-weight: 700;
+    }
+
+    .intro {
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 18px;
+      color: #6a4c7b; /* morado medio */
+    }
+
+    .sobres {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .sobre {
+      background: #f3d6f5; /* rosa lavanda suave */
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 12px rgba(138, 43, 226, 0.3); /* sombra morada suave */
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      user-select: none;
+      color: #4b2a57; /* texto morado oscuro */
+      font-weight: 600;
+    }
+
+    .sobre:hover {
+      transform: scale(1.05);
+      box-shadow: 4px 4px 15px rgba(138, 43, 226, 0.5);
+      background: #d9b3ff; /* rosa más intenso al hover */
+    }
+
+    .mensaje {
+      display: none;
+      background: #f6e7ff; /* lavanda muy claro para mensajes */
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+      text-align: left;
+      color: #4b2a57;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    iframe {
+      width: 100%;
+      height: 352px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Para Vanessa</h1>
+    <p class="intro">Una caja de sobres virtual para abrir cuando lo necesites. Porque incluso a la distancia, estoy con vos 😁</p>
+
+    <section class="sobres">
+      <div class="sobre" onclick="mostrarMensaje('feliz')">Ábrelo cuando estés feliz 😄</div>
+      <div class="sobre" onclick="mostrarMensaje('extrañes')">Ábrelo cuando me extrañes 🥺</div>
+      <div class="sobre" onclick="mostrarMensaje('reir')">Ábrelo cuando necesites reírte 😂</div>
+      <div class="sobre" onclick="mostrarMensaje('triste')">Ábrelo cuando estés triste 😔</div>
+      <div class="sobre" onclick="mostrarMensaje('motivacion')">Ábrelo cuando necesites motivación 💪</div>
+      <div class="sobre" onclick="mostrarMensaje('musica')">Ábrelo cuando quieras escuchar música 🎧</div>
+      <div class="sobre" onclick="mostrarMensaje('consejo')">Ábrelo cuando necesites un consejo 🧠</div>
+      <div class="sobre" onclick="mostrarMensaje('mal')">Ábrelo cuando sientas que todo te sale mal ❌</div>
+      <div class="sobre" onclick="mostrarMensaje('orgullo')">Ábrelo cuando te sientas orgullosa de vos misma 🌟</div>
+      <div class="sobre" onclick="mostrarMensaje('insomnio')">Ábrelo cuando no puedas dormir 🌙</div>
+      <div class="sobre" onclick="mostrarMensaje('valiosa')">Ábrelo cuando necesites recordar lo valiosa que sos 💎</div>
+      <div class="sobre" onclick="mostrarMensaje('quieneres')">Ábrelo cuando necesites recordar quién eres 🪞</div>
+      <div class="sobre" onclick="mostrarMensaje('calma')">Ábrelo cuando necesites un momento de calma 🧘‍♀️</div>
+      <div class="sobre" onclick="mostrarMensaje('noentendida')">Ábrelo cuando sientas que nadie te entiende 🫤</div>
+      <div class="sobre" onclick="mostrarMensaje('recuerdolindo')">Ábrelo cuando quieras un recuerdo lindo 🎞️</div>
+    </section>
+
+    <!-- Secciones de mensajes -->
+    <section id="feliz" class="mensaje">
+      <h2>Cuando estés feliz 😄</h2>
+      <p>¡Me encanta saber que estás feliz! Mandame un audio, contame todo, y disfrutalo al máximo. Guardá este momento para cuando lo necesites más adelante. ✨</p>
+    </section>
+
+    <section id="extrañes" class="mensaje">
+      <h2>Cuando me extrañes 🥺</h2>
+      <p>Yo también te extraño. Pero acá estoy, y esto es una forma de estar más cerquita. Podemos no vernos, pero te llevo conmigo siempre 🫂</p>
+    </section>
+
+    <section id="reir" class="mensaje">
+      <h2>Cuando necesites reírte 😂</h2>
+      <p>¡Reírse es medicina para el alma! Pensá en algún momento gracioso, como cuando juntos cantamos el Himno Nacional de Sonora 😂</p>
+    </section>
+
+    <section id="triste" class="mensaje">
+      <h2>Cuando estés triste 😔</h2>
+      <p>Todo pasa, incluso esto. Si pudiera estar ahí te daría un abrazo largo y te diría lo mucho que te quiero 🥰</p>
+    </section>
+
+    <section id="motivacion" class="mensaje">
+      <h2>Cuando necesites motivación 💪</h2>
+      <p>¿Sabés todo lo que valés? Un montón. Sos fuerte, buena persona, graciosa, dulce y capaz de muchísimo. Estás hecha para cosas grandes, y yo estoy acá siempre para recordártelo 🌟</p>
+    </section>
+
+    <section id="musica" class="mensaje">
+      <h2>Cuando quieras escuchar música 🎧</h2>
+      <p>Esta es tu playlist, con canciones que me recuerdan a ti y te encantan. Ya sabés: poné play, cerrá los ojos y sentí que estamos juntos 💽</p>
+      <iframe src="https://open.spotify.com/embed/playlist/1C0pqYNt2XP21OmUi0ndeQ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section id="consejo" class="mensaje">
+      <h2>Cuando necesites un consejo 🧠</h2>
+      <p>No tengo todas las respuestas, pero siempre voy a querer lo mejor para ti. A veces el mejor consejo es: hacé lo que te haga sentir en paz, no lo que te impongan. Estoy aquí para ayudarte, siempre 🫂</p>
+    </section>
+
+    <section id="mal" class="mensaje">
+      <h2>Cuando sientas que todo te sale mal ❌</h2>
+      <p>Respirá. No es el fin del mundo, aunque parezca. Cada paso en falso también enseña. Te admiro por seguir intentando. Sos mucho más que tus errores. Estoy con vos 🫂</p>
+    </section>
+
+    <section id="orgullo" class="mensaje">
+      <h2>Cuando te sientas orgullosa de ti misma 🌟</h2>
+      <p>¡Eso! Quiero que guardes ese momento. Porque sos increíble. Porque cada logro, por más chiquito que parezca, merece ser celebrado. ¡Estoy orgulloso de ti! ✨</p>
+    </section>
+
+    <section id="insomnio" class="mensaje">
+      <h2>Cuando no puedas dormir 🌙</h2>
+      <p>Contá estrellas, no ovejas. Escuchá tu respiración. Poné esa canción que te relaja. Y si no funciona: escribime. Estoy con vos, aunque sea en silencio 💤</p>
+    </section>
+
+    <section id="valiosa" class="mensaje">
+      <h2>Cuando necesites recordar lo valiosa que sos 💎</h2>
+      <p>Te lo repito con letras grandes: SOS VALIOSA. No por lo que hacés, sino por quién sos. Y no lo olvides nunca. Este mundo es mejor con vos en él 🌎</p>
+    </section>
+
+    <section id="quieneres" class="mensaje">
+      <h2>Cuando necesites recordar quién eres 🪞</h2>
+      <p>Sos una persona única, con luz propia, con historia, con fuerza. No dejes que el ruido del mundo te haga olvidar quién sos. Estás hecha de amor, de ideas, de magia. Volvé siempre a vos 😊</p>
+    </section>
+
+    <section id="calma" class="mensaje">
+      <h2>Cuando necesites un momento de calma 🧘‍♀️</h2>
+      <p>Respirá profundo. Cerrá los ojos y sentí la tranquilidad que te merecés. Estoy acá, acompañándote en silencio 🙂‍↕️</p>
+    </section>
+
+    <section id="noentendida" class="mensaje">
+      <h2>Cuando sientas que nadie te entiende 🫤</h2>
+      <p>Tal vez no todos te entiendan, pero eso no significa que estés sola. Tu forma de ver el mundo es única. Yo te escucho, te entiendo y te acompaño. Siempre 🫂</p>
+    </section>
+
+    <section id="recuerdolindo" class="mensaje">
+      <h2>Cuando quieras un recuerdo lindo 🎞️</h2>
+      <p>¿Te acordás de cuando vimos ese capitulo de Las Alucines y quedamos tipo: "hay un poquito de vídeo en tu publicidad de Garnier, camaradas Lupita y Quesito" 🤨.</p>
+    </section>
+  </main>
+
+  <script>
+    function mostrarMensaje(id) {
+      // Ocultar todos los mensajes
+      const mensajes = document.querySelectorAll('.mensaje');
+      mensajes.forEach(m => m.style.display = 'none');
+
+      // Mostrar el mensaje seleccionado
+      const mensaje = document.getElementById(id);
+      if (mensaje) {
+        mensaje.style.display = 'block';
+        // Scroll suave para que se vea el mensaje
+        mensaje.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
